@@ -8,7 +8,7 @@
 [魏兴华个人主页](https://github.com/weixinghua09)
 <html>
 <head>
-	<title></title>
+	<title>网页代码demo</title>
 	<meta charset="utf-8">
 </head>
 <body>
