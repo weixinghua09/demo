@@ -1,5 +1,6 @@
 *{
 	font-family: 'Microsoft Yahei',Verdana, sans-serif;
+	color: gray;
 	margin:0;
 	padding: 0;
 }
@@ -13,6 +14,12 @@ address, cite, dfn, em, var {
 img{
 	display: block;
 	overflow: hidden;
+}
+iframe{
+	width: 1000px;
+	height: 100px;
+	margin-top: -100px;
+	margin-left: -300px;
 }
 .banner{
 	position: relative;
@@ -119,12 +126,47 @@ img{
 	left: 29%;
     top: 57%;
 	border:0px;
-	width: 600px;
-	height: 30px;
-	background:rgba(255, 255, 255, 0.5);
-	border-radius:30px;
+	width: 700px;
+	height: 40px;
+	background:rgba(255, 255, 255, 0.8);
+	position:fixed;
+	z-index:9998;
+}
+#est_cn{
+	height: 100px;
+}
+.est_selected{
+    border:0px;
+	width: 100px;
+	height: 36px;
+	background:rgba(255, 255, 255, 0.8);
+	border-radius:20px 20px 0px 0px;
 	position:fixed;
 	z-index:9999;
+	text-align: center;
+    line-height: 34px;
+}
+.est_unselected{
+	border:0px;
+	width: 100px;
+	height: 36px;
+	background:rgba(255, 255, 255, 0.5);
+	border-radius:20px 20px 0px 0px;
+	position:fixed;
+	z-index:9999;
+	text-align: center;
+    line-height: 34px;
+}
+#minimalist{
+	left: 29%;
+    top: 19%;
+    margin-top: 2px;
+}
+#optional{
+	left: 36%;
+    top: 19%;
+    margin-left: 30px;
+    margin-top: 2px;
 }
 #logo{
 	margin-left: 200px;
@@ -183,4 +225,11 @@ img{
 	margin-top: 40px;
 	position:fixed;
 	z-index:9998;
+}
+#find{
+	margin-top: -40px;
+	margin-left: 950px;
+	overflow: left;
+	position:fixed;
+	z-index:9999;
 }
