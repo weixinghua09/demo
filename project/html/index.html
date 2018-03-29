@@ -8,17 +8,20 @@
 <body>
 	<div class="banner" id="b04">
 		<div id="center-search">
+			<!-- logo -->
 			<img src="img/logo.png" id="logo">
 			<iframe src="minimalist.html" frameborder="0" name="search_box"></iframe>		
 		</div>		
 		<div id="navigation">
-			<!-- <a href="index.html" id="index-nav"> -->
+		<!-- 右下角导航 -->
+			<a href="index.html" id="index-nav">
 				<img src="img/indexball.png" id="indexball">
 				<div id="login"><a href="#"><img src="img/login.png" class="nav"></a></div>
 				<div id="register"><a href="#"><img src="img/register.png" class="nav"></a></div>
 				<div id="qrcode"><a href="#"><img src="img/qrcode.png" class="nav"></a></div>
-			<!-- </a> -->
+			</a>
 		</div>
+		<!-- 轮播大图 -->
 		<ul>
 			<li class="slider-item">
 				<a href="#">
@@ -64,6 +67,7 @@
 	<script src="js/unslider.min.js"></script>
 
 	<script>
+		// 轮播图
 		$(document).ready(function(e) {
 			var progress = $(".progress"),li_width = $("#b04 li").length;
 		    var unslider04 = $('#b04').unslider({
@@ -79,13 +83,12 @@
 		        data04[fn]();
 		    });
 		});
-
+		// 右下角导航
 		$(document).ready(function(){
   			$("#indexball").hover(function(){
   				$(".nav").toggle();
   			});
 		});
-
 		$(document).ready(function(){
   			$(".nav").hover(function(){
   				$(".nav").show();
