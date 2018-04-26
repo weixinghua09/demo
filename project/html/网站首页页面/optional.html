@@ -3,16 +3,29 @@
 <head>
 	<title>minimalist</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="css/index.css">
+   <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="est_cn">
 		<a href="minimalist.html"><div id="minimalist" class="est_unselected">极&nbsp&nbsp简</div></a>
 		<a href="optional.html"><div id="optional" class="est_selected">自&nbsp&nbsp选</div></a>
 	</div>
-	<form>
-		<input id="search" type="text"/>
-		<input id="find" type="submit" value="   " />
-	</form>
+	 <form class="bs-example bs-example-form" role="form" id="search">
+            <div class="row">
+               <div class="col-lg-6">
+                  <div class="input-group">
+                     <input type="text" class="form-control">
+                     <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                           <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                     </span>
+                  </div><!-- /input-group -->
+               </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+         </form>
 </body>
 </html>

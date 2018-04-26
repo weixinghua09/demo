@@ -171,6 +171,10 @@ ul.navbar-nav {
 	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
 	text-align: left;
 }
+#veCode{
+	width: 300px;
+	float: left;
+}
 
 form .form-bottom textarea {
 	height: 100px;
