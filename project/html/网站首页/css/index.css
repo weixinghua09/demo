@@ -1,0 +1,144 @@
+*{
+	font-family: 'Microsoft Yahei',Verdana, sans-serif;
+	color: gray;
+	margin:0;
+	padding: 0;
+}
+html,body{
+    background-color: rgba(255, 255, 255, 0);
+}
+ul, li{
+	list-style: none;
+}
+address, cite, dfn, em, var {
+	font-style: normal;
+}
+img{
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	
+}
+iframe{
+	width: 1000px;
+	height: 200px;
+	margin-top: -100px;
+	margin-left: -300px;
+	background-color: rgba(255, 255, 255, 0);
+}
+#center-search{
+	left: 22%;
+    top: 10%;
+	background-color: rgba(255, 255, 255, 0);
+	position:fixed;
+	z-index:9998;
+	border:0px;
+	width: 800px;
+	height: 400px;
+	overflow: hidden;
+}
+#est_cn{
+	height: 100px;
+}
+.est_selected{
+    border:0px;
+	width: 100px;
+	height: 36px;
+	background:rgba(255, 255, 255, 1);
+	border-radius:20px 20px 0px 0px;
+	position:fixed;
+	z-index:9999;
+	text-align: center;
+    line-height: 34px;
+}
+.est_unselected{
+	border:0px;
+	width: 100px;
+	height: 36px;
+	background:rgba(255, 255, 255, 0.8);
+	border-radius:20px 20px 0px 0px;
+	position:fixed;
+	z-index:9999;
+	text-align: center;
+    line-height: 34px;
+}
+#search{
+	left: 35%;
+    top: 37%;
+	border:0px;
+	width: 650px;
+	height: 40px;
+	background:rgba(255, 255, 255, 0);
+	position:fixed;
+	z-index:9998;
+}
+#minimalist{
+	left: 35%;
+    top: 19%;
+    margin-top: 2px;
+}
+#optional{
+	left: 42%;
+    top: 19%;
+    margin-left: 30px;
+    margin-top: 2px;
+}
+#logo{
+	margin-left: 200px;
+	margin-top: -150px;
+	width: 375px;
+	height: 525px;
+}
+
+#navigation{
+	left: 90%;
+    top: 78%;
+	position:fixed;
+	z-index:9998;
+	border:0px;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+}
+#index-nav{
+
+}
+#indexball{
+	height: 150px;
+	width: 150px;
+	position:fixed;
+	z-index:9999;
+	float: right;
+}
+.nav{
+	display: none;
+	height: 100px;
+	width: 100px;
+	position:fixed;
+	z-index:9998;
+}
+#login{
+	height: 100px;
+	width: 100px;
+	margin-left: 40px;
+	margin-top: -100px;
+	position:fixed;
+	z-index:9998;
+}
+#register{
+	height: 100px;
+	width: 100px;
+	margin-left: -50px;
+	margin-top: -50px;
+	position:fixed;
+	z-index:9998;
+}
+#qrcode{
+	height: 100px;
+	width: 101px;
+	margin-left: -90px;
+	margin-top: 40px;
+	position:fixed;
+	z-index:9998;
+}

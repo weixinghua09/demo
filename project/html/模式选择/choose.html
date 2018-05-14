@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="css/choose.css">
+		<script type="text/javascript">
+		   window.onload = function () {
+             _page1 = document.getElementById('page1');
+             _page2 = document.getElementById('page2');
+             _fist_div = document.getElementById('fist_div');
+             _second_div = document.getElementById('second_div');
+             _third_div = document.getElementById('third_div');
+             _fourth_div = document.getElementById('fourth_div');
+			 /*color1 = window.getComputedStyle(_page1,null).backgroundColor
+			 color2 = window.getComputedStyle(_page2,null).backgroundColor*/
+           	 color = new Array("yellow","red","blue","green","gray")
+           	 count = 0;
+           	 _page1.style.backgroundColor = color[0]
+           	 _page2.style.backgroundColor = color[1]
+           	 
+           	 _fist_div.onclick = function () {
+              if(count>4) {
+              	count=0
+              }
+              if(count==4) {
+              	 _page1.className="tran"
+              _page1.style.backgroundColor = color[4]
+
+               
+                _page2.className="scale"
+              _page2.style.backgroundColor = color[0]
+              }else {
+              	 _page1.className="tran"
+              _page1.style.backgroundColor = color[count]
+              
+               
+                _page2.className="scale"
+              _page2.style.backgroundColor = color[count+1]
+             
+              }
+              count+=1;
+
+            };
+
+           	 _second_div.onclick = function () {
+              if(count>4) {
+              	count=0
+              }
+              if(count==4) {
+              	 _page1.className="tran"
+              _page1.style.backgroundColor = color[4]
+
+               
+                _page2.className="scale"
+              _page2.style.backgroundColor = color[0]
+              }else {
+              	 _page1.className="tran"
+              _page1.style.backgroundColor = color[count]
+              
+               
+                _page2.className="scale"
+              _page2.style.backgroundColor = color[count+1]
+             
+              }
+              count+=1;
+
+            };
+
+            _third_div.onclick = function () {
+              if(count>4) {
+              	count=0
+              }
+              if(count==4) {
+              	 _page2.className="tran"
+              _page2.style.backgroundColor = color[4]
+
+               
+                _page1.className="scale"
+              _page1.style.backgroundColor = color[0]
+              }else {
+              	 _page2.className="tran"
+              _page2.style.backgroundColor = color[count]
+              
+               
+                _page1.className="scale"
+              _page1.style.backgroundColor = color[count+1]
+             
+              }
+              count+=1;
+
+            };
+
+            _fourth_div.onclick = function () {
+            	if(count>4) {
+              	count=0
+              }
+              if(count==4){
+              	_page2.className="tran";
+ 			  _page2.style.backgroundColor = color[4]
+
+            	
+            	_page1.className="scale";
+              _page1.style.backgroundColor = color[0]
+              }else {
+              	_page2.className="tran";
+ 			  _page2.style.backgroundColor = color[count]
+
+            	
+            	_page1.className="scale";
+              _page1.style.backgroundColor = color[count+1]
+              }
+ 				count+=1;            	
+            };
+           }
+
+		</script>
+	</head>
+	<body style="height:100%;">	
+		<div class="page1" id="page1">
+			<div class="question" id="question1"><h1>选择您喜欢的模式</h1></div>
+			<div class="left_div" id="fist_div"><h2>极简</h2></div>
+			<div class="right_div" id="second_div"><h2>自选</h2></div>
+		</div>
+		<div class="page2" id="page2" >
+		<div class="question" id="question2"><h1>选择您想要的授课形式</h1></div>
+			<div class="left_div" id="third_div"><h2>面授课</h2></div>
+			<div class="right_div" id="fourth_div"><h2>视频课</h2></div>
+		</div>
+		
+	</body>
+</html>
