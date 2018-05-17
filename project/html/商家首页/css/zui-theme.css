@@ -6,11 +6,11 @@
  */
 
 a {
-  color: #3949ab;
+  color: gray;
   }
 a:hover,
 a:focus {
-  color: #263172;
+  color: gray;
   }
 .btn {
   color: #353535;
