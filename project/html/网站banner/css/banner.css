@@ -11,9 +11,9 @@ img{
 	width: 100%;
 }
 #logo{
-	width: 200px;
-	height: 100px;
-	margin-top: 2%;
+	width: 140px;
+	height: 70px;
+	margin-top: 1%;
 	margin-bottom: 1%;
 	position: relative;
 	left: 10%;
@@ -24,13 +24,13 @@ img{
 	position: relative;
 	float: left;
 	margin-left: 25%;
-	margin-top: 5%;
+	margin-top: 3%;
 }
 /*定位*/
 #locate{
 	float: left;
 	width: 90px;
-	margin-top: 5%;
+	margin-top: 3%;
 	margin-left: 3%;
 	color: #0D7FFC;
 }
@@ -42,7 +42,7 @@ img{
 }
 /*个人中心*/
 #myPhoto{
-	margin-top: 4%;
+	margin-top: 2%;
 	margin-right: 10%;
 	float: right;
 	width: 50px;
