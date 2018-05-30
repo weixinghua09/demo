@@ -14,8 +14,8 @@ $(document).ready(function(){
 });
 // 定义欢迎标签页
 var tabs = [{
-	title: '管理我的店铺',
-	url: 'iframe/courses.html',
+	title: '实时数据',
+	url: 'iframe/realdata.html',
 	type: 'iframe'
 }];
 //初始化标签页管理器

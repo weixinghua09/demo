@@ -10,19 +10,270 @@
 		<!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
 		<script src="../lib/jquery/jquery.js"></script>
 		<!-- ZUI Javascript组件 -->
-			<script src="../js/zui.min.js"></script>
+		<script src="../js/zui.min.js"></script>
 	</head>
 	<body>
 		<div class="container-fluid" style="padding: 20px; background-color: #F9F8F7;">
-			<div class="container" style="padding: 20px; border-radius: 8px;box-shadow: #E5E4E1 2px 2px 12px;">
-				<div id="top"></div>
-				<div id="content">
-					<div id="buspicture"></div>
+			<div class="container" style="background-color: white; padding: 20px; border-radius: 8px;box-shadow: #E5E4E1 2px 2px 12px;">
+				<div id="top">
+					<img src="../images/cover.jpg">
+				</div>
+				<div id="content" style="padding: 50px;">
+					<div id="buspicture">
+						<img src="../images/me.png" style="border-radius: 6px;">
+					</div>
 					<div id="basicinfo">
-						
+						<h2>宇宙教育</h2><br/>
+						<div id="contact" class="autoheight" onmouseover="showContact()" onmouseout="hideContact()">
+							<label class="infoitem" title="点击修改">联系人:</label>
+							<div id="editContact">
+								<p id="busContact" class="info">啦啦啦</p>
+								<div id="edit1" class="edit">
+									<a href="javascript:;" onclick="editContact()">
+										<i class="icon icon-pencil">&nbsp;</i>修改
+									</a>
+								</div>
+							</div>
+							<div id="contactForm" class="forms">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<div class="col-md-3 col-sm-10">
+											<input type="text" class="form-control" id="courseName" placeholder="联系人"/><br/>
+											<button type="submit" class="btn btn-primary">保存</button>
+											<button type="button" class="btn" onclick="cancelContact()">取消</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<br/><hr class="divider"><br/>
+
+						<div id="tel" class="autoheight" onmouseover="showTel()" onmouseout="hideTel()">
+							<label class="infoitem">电话:</label>
+							<div id="editTel">
+								<p id="busTel" class="info">啦啦啦</p>
+								<div id="edit2" class="edit">
+									<a href="javascript:;" onclick="editTel()">
+										<i class="icon icon-pencil">&nbsp;</i>修改
+									</a>
+								</div>
+							</div>
+							<div id="telForm" class="forms">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<div class="col-md-3 col-sm-10">
+											<input type="text" class="form-control" id="courseName" placeholder="电话"/><br/>
+											<button type="submit" class="btn btn-primary">保存</button>
+											<button type="button" class="btn" onclick="cancelTel()">取消</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<br/><hr class="divider"><br/>
+
+						<div id="email" class="autoheight" onmouseover="showEmail()" onmouseout="hideEmail()">
+							<label class="infoitem">邮箱:</label>
+							<div id="editEmail">
+								<p id="busEmail" class="info">啦啦啦</p>
+								<div id="edit3" class="edit">
+									<a href="javascript:;" onclick="editEmail()">
+										<i class="icon icon-pencil">&nbsp;</i>修改
+									</a>
+								</div>
+							</div>
+							<div id="emailForm" class="forms">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<div class="col-md-3 col-sm-10">
+											<input type="text" class="form-control" id="courseName" placeholder="邮箱"/><br/>
+											<button type="submit" class="btn btn-primary">保存</button>
+											<button type="button" class="btn" onclick="cancelEmail()">取消</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<br/><hr class="divider"><br/>
+
+						<div id="license" class="autoheight" onmouseover="showLicense()" onmouseout="hideLicense()">
+							<label class="infoitem">营业执照编号:</label>
+							<div id="editLicense">
+								<p id="busLicense" class="info">啦啦啦</p>
+								<div id="edit4" class="edit">
+									<a href="javascript:;" onclick="editLicense()">
+										<i class="icon icon-pencil">&nbsp;</i>修改
+									</a>
+								</div>
+							</div>
+							<div id="licenseForm" class="forms">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<div class="col-md-3 col-sm-10">
+											<input type="text" class="form-control" id="courseName" placeholder="营业执照编号"/><br/>
+											<button type="submit" class="btn btn-primary">保存</button>
+											<button type="button" class="btn" onclick="cancelLicense()">取消</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<br/><hr class="divider"><br/>
+
+						<div id="address" class="autoheight" onmouseover="showAddress()" onmouseout="hideAddress()">
+							<label class="infoitem">公司地址:</label>
+							<div id="editAddress">
+								<p id="busAddress" class="info">啦啦啦</p>
+								<div id="edit5" class="edit">
+									<a href="javascript:;" onclick="editAddress()">
+										<i class="icon icon-pencil">&nbsp;</i>修改
+									</a>
+								</div>
+							</div>
+							<div id="addressForm" class="forms">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<div class="col-md-3 col-sm-10">
+											<input type="text" class="form-control" id="courseName" placeholder="公司地址"/><br/>
+											<button type="submit" class="btn btn-primary">保存</button>
+											<button type="button" class="btn" onclick="cancelAddress()">取消</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<br/><hr class="divider"><br/>
+
+						<div id="corporate" class="autoheight" onmouseover="showCorporate()" onmouseout="hideCorporate()">
+							<label class="infoitem">公司法人:</label>
+							<div id="editCorporate">
+								<p id="busCorporate" class="info">啦啦啦</p>
+								<div id="edit6" class="edit">
+									<a href="javascript:;" onclick="editCorporate()">
+										<i class="icon icon-pencil">&nbsp;</i>修改
+									</a>
+								</div>
+							</div>
+							<div id="corporateForm" class="forms">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<div class="col-md-3 col-sm-10">
+											<input type="text" class="form-control" id="courseName" placeholder="公司法人"/><br/>
+											<button type="submit" class="btn btn-primary">保存</button>
+											<button type="button" class="btn" onclick="cancelCorporate()">取消</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<br/><hr class="divider"><br/>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script>
+			// 联系人
+			function showContact(){
+				$("#edit1").show();
+			}
+			function hideContact(){
+				$("#edit1").hide();
+			}
+			function editContact(){
+				$("#contactForm").show();
+				$("#editContact").hide();
+			}
+			function cancelContact(){
+				$("#contactForm").hide();
+				$("#contact").show();
+				$("#editContact").show();
+			}
+			// 电话
+			function showTel(){
+				$("#edit2").show();
+			}
+			function hideTel(){
+				$("#edit2").hide();
+			}
+			function editTel(){
+				$("#telForm").show();
+				$("#editTel").hide();
+			}
+			function cancelTel(){
+				$("#telForm").hide();
+				$("#tel").show();
+				$("#editTel").show();
+			}
+			// 邮箱
+			function showEmail(){
+				$("#edit3").show();
+			}
+			function hideEmail(){
+				$("#edit3").hide();
+			}
+			function editEmail(){
+				$("#emailForm").show();
+				$("#editEmail").hide();
+			}
+			function cancelEmail(){
+				$("#emailForm").hide();
+				$("#email").show();
+				$("#editEmail").show();
+			}
+			//营业执照号
+			function showLicense(){
+				$("#edit4").show();
+			}
+			function hideLicense(){
+				$("#edit4").hide();
+			}
+			function editLicense(){
+				$("#licenseForm").show();
+				$("#editLicense").hide();
+			}
+			function cancelLicense(){
+				$("#licenseForm").hide();
+				$("#license").show();
+				$("#editLicense").show();
+			}
+			//公司地址
+			function showAddress(){
+				$("#edit5").show();
+			}
+			function hideAddress(){
+				$("#edit5").hide();
+			}
+			function editAddress(){
+				$("#addressForm").show();
+				$("#editAddress").hide();
+			}
+			function cancelAddress(){
+				$("#addressForm").hide();
+				$("#address").show();
+				$("#editAddress").show();
+			}
+			//公司法人
+			function showCorporate(){
+				$("#edit6").show();
+			}
+			function hideCorporate(){
+				$("#edit6").hide();
+			}
+			function editCorporate(){
+				$("#corporateForm").show();
+				$("#editCorporate").hide();
+			}
+			function cancelCorporate(){
+				$("#corporateForm").hide();
+				$("#corporate").show();
+				$("#editCorporate").show();
+			}
+		</script>
 	</body>
-</html>
+</html>""
