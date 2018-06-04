@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>密码重置</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/zui.css">
+		<link rel="stylesheet" type="text/css" href="css/banner.css">
+		<link href="../lib/uploader/zui.uploader.min.css" rel="stylesheet">
+   		<!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+		<script src="lib/jquery/jquery.js"></script>
+		<!-- ZUI Javascript组件 -->
+		<script src="js/zui.min.js"></script>
+		<script src="lib/uploader/zui.uploader.min.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid" style="background-color: #F9F8F7;">
+			<div id="header">
+				<!--logo-->
+				<div id="logo">
+					<img src="images/logo.png"/>
+				</div>
+				<!--搜索框-->
+				<div id="find">
+					<form>
+						<div class="input-group">
+							<div class="input-control search-box search-box-circle has-icon-left has-icon-right search-example" id="searchboxExample">
+								<input id="inputSearchExample3" type="search" class="form-control search-input" placeholder="搜索"/>
+								<label for="inputSearchExample3" class="input-control-icon-left search-icon">
+									<i class="icon icon-search"></i>
+								</label>
+							</div>
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="submit">搜索</button>
+							</span>
+						</div>
+					</form>					
+				</div>
+				<!--定位-->
+				<div id="locate">
+					<i class="icon icon-map-marker icon-2x"></i>
+					<p id="address">[<a href="#" style="color:#3280fc;">切换地址</a>]</p>
+				</div>
+				<!--个人头像-->
+				<div id="userPad">
+					<div id="myPhoto">
+						<img src="images/me.png"/>
+					</div>
+					<div class="popover bottom" id="myPopover">
+						<div class="arrow"></div>
+							<h3 class="popover-title"><a href="#"><i class="icon icon-home"></i>&nbsp&nbsp个人中心</a></h3>
+							<div class="popover-content">
+								<ul>
+									<li class="menu-li"><a href="#"><i class="icon icon-envelope"></i>&nbsp&nbsp我的消息</a></li>
+									<li class="menu-li"><a href="#"><i class="icon icon-history"></i>&nbsp&nbsp我的足迹</a></li>
+									<li class="menu-li"><a href="#"><i class="icon icon-check-board"></i>&nbsp&nbsp我的预约</a></li>
+									<li class="menu-li"><a href="#"><i class="icon icon-star"></i>&nbsp&nbsp我的收藏</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--导航条-->
+				<div id="navigation">
+					<ul class="nav nav-secondary">
+						<li><a href="#" class="nav-a">首页</a></li>
+						<li><a href="#" class="nav-a">动态 <span class="label label-badge label-success">4</span></a></li>
+						<li><a href="#" class="nav-a">项目 </a></li>
+						<li><a href="#" class="nav-a">哈哈</a></li>
+					</ul>
+				</div>
+			</div> 
+		</div>
+		<div class="container">
+			<div style="width: 100%;overflow: hidden;">
+				<h2 style="text-align: center;">请重新设置密码</h2><br/>
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-4 required">用户名显示</label>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-4 required">密码</label>
+						<div class="col-md-3 col-sm-10">
+							<input type="password" class="form-control" id="password" placeholder="密码"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-4 required">确认密码</label>
+						<div class="col-md-3 col-sm-10">
+							<input type="password" name="randomCode" placeholder="确认密码" class="form-last-name form-control" id="tpassword"/><span>&nbsp&nbsp&nbsp</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-7 col-sm-10">
+							<button type="submit" class="btn btn-primary" onclick="check()">确定</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script>
+			 $(document).ready(function(){
+		         $("#myPhoto").hover(function(){
+		            $("#myPopover").toggle();
+		         });
+		      });
+		      $(document).ready(function(){
+		         $("#myPopover").hover(function(){
+		            $("#myPopover").show();
+		         });
+		         $("#myPopover").mouseleave(function(){
+		            $("#myPopover").hide();
+		         });
+		      });
+			function check(){
+				var pwd = document.getElementById("password").value
+				var tpwd = document.getElementById("tpassword").value
+
+				if (pwd != tpwd) {
+					alert("两次密码输入不一致，请重新输入");
+				}
+			}
+		</script>
+
+	</body>
+</html>
