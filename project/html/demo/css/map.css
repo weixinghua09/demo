@@ -1,0 +1,11 @@
+#buspicture{
+	float: left;
+	width: 150px;
+	height: 150px;
+	top: 70%;
+	position: fixed;
+	z-index: 1;
+	border: 6px solid white;
+	border-radius: 8px;
+	box-shadow: #E5E4E1 2px 2px 12px;
+}
