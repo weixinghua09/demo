@@ -142,3 +142,6 @@ iframe{
 	position:fixed;
 	z-index:9998;
 }
+#index-find{
+	height: 50px;
+}

@@ -1,0 +1,574 @@
+#one{            
+	position:absolute;                     
+	top:30%;            
+	left:50%;  
+	width:400px;            
+	height:600px;            
+	margin-top:-130px;           
+	margin-left:-180px;           
+	background:#FFFFE0; 
+	border-radius:25px;
+	}
+#two_ifr{            
+      
+	width:400px;            
+	height:600px; 
+	border-radius:25px;           
+	background-color:;
+	}
+#three_ifr{                    
+	width:355px;            
+	height:50px;            
+	}
+#four_ifr{                  
+	width:400px;            
+	height:600px; 
+	border-radius:25px;           
+	background-color:;
+	}	
+#logo{
+	width:50px; 
+	height:70px; 
+	margin-top:50px; 
+	margin-left:160px; 
+	background-color:black;  
+}	
+#input{
+	width:300px; 
+	height:270px; 
+	margin-top:30px; 
+	margin-left:40px; 
+	background-color:;  
+}
+#inputregiste{
+	width:300px; 
+	height:225px; 
+	margin-top:30px; 
+	margin-left:40px; 
+	background-color:;  
+}
+.buttominput{
+	margin-left:40px;
+}
+.input_size{
+	width:300px;
+	height:40px;
+	font-size: 20px;
+	color:#C5C1AA;
+}
+.input_pwdsize{
+	width:300px;
+	height:40px;
+	font-size: 20px;
+	color:#C5C1AA;
+	display:none;
+}
+#input_size1{
+	width:150px;
+	height:40px;
+	font-size: 20px;
+	color:#C5C1AA;
+		
+}
+#span_position{
+	width:100px;
+	height:40px;
+	margin-left:30px;
+	display: inline-block;
+	vertical-align: middle;
+		
+}
+#input_size2{
+	width:300px;
+	height:50px;
+	background-color:;  	
+}
+.input_position{
+	width:300px;
+	height:40px;
+	margin-top: 40px;
+	font-size: 18px;
+	font-weight:bold;
+	color:#FFFFE0;
+	border-radius:10px;
+	margin-left:0px;
+	background-color:#1E90FF;
+}
+.input_position2{
+	width:300px;
+	height:40px;
+	margin-top: 40px;
+	font-size: 18px;
+	font-weight:bold;
+	color:#FFFFE0;
+	border-radius:10px;
+	margin-left:0px;
+	text-align:center;
+	line-height:40px;
+	background-color:#1E90FF;
+	display:none;
+}
+#fond_size{
+	width:150px;
+	height:35px;
+	font-size: 15px;
+}
+
+#fond_style{
+	width:150px;
+	height:35px;
+	margin-top:20px;
+	margin-left:200px;
+	font-size: 17px;
+	color:#8B8970;
+	font-family: SimSun;
+}
+#fond_styleRegiste{
+	width:140px;
+	height:35px;
+	margin-top:20px;
+	margin-left:240px;
+	font-size: 17px;
+	color:#8B8970;
+	font-family: SimSun;
+}
+a{
+	text-decoration: none;
+	color:#1C86EE;
+}
+#fond_style2{
+	width:280px;
+	margin-top:100px;
+	margin-left:100px;
+	font-size: 18px;
+	font-weight:bold;
+	font-family: SimSun; 
+}
+#fond_Telstyle{
+	width:280px;
+	margin-top:-10px;
+	margin-left:100px;
+	font-size: 18px;
+	font-weight:bold;
+	font-family: SimSun; 
+}
+#qq_position{
+	margin-top:80px:
+	margin-left:200px;
+}
+
+
+/*个人中心css*/
+#person_banner{
+	width: 100%;
+	height:80px;
+	margin-top:-20px;
+	background-color:#8F8F8F; 
+}
+.main_left{
+	height: 600px;
+	width: 220px;
+	position:absolute;                     
+	top:20%;            
+	left:11%; 
+	background-color: #FAFAFA;
+}
+.main_right{
+	height: 600px;
+	width: 1000px;
+	position:absolute;                     
+	top:20%;            
+	left:28%; 
+	z-index:-1;
+	background-color: ;
+}
+.image{
+	width: 100px;
+	height: 100px;
+	margin-left: 60px;
+	border-radius:50px 50px 50px 50px;
+	background-color: #FAFAFA;
+	 
+}
+.image img{
+	border-radius:50%; 
+}
+.image_change{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin-top: -100px;
+	margin-left: 60px;
+	border-radius:50px 50px 50px 50px;
+	background-color: red;
+	 z-index:999;
+	 display:none ;
+}
+.image_change img{
+	border-radius:50%;
+	opacity:0.8;
+	cursor:pointer ;
+}
+.image_text{
+	width: 70px;
+	height:28px;
+	position:absolute;                     
+	top:4%;            
+	left:35%;
+	background-color: ;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color:white;
+	cursor:pointer ;
+}
+.username{
+	width: 200px;
+	height: 30px;
+	margin-top: 15px;
+	font-family: "微软雅黑";
+	font-size: 19px;
+	color: black;
+	text-align: center;
+}
+.username_mananger{
+	width: 180px;
+	height: 30px;
+	margin-top: 25px;
+	margin-left: 20px;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+}
+.usermessage1{
+	width: 220px;
+	height: 60px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	line-height: 60px;
+	background-color: #FAFAFA;
+	cursor:pointer ;
+}
+.usermessage2{
+	width: 220px;
+	height: 60px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	line-height: 60px;
+	background-color: #FAFAFA;
+	cursor:pointer ;
+}
+.usermessage3{
+	width: 220px;
+	height: 60px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	line-height: 60px;
+	background-color: #FAFAFA;
+	cursor:pointer ;
+}
+.usermessage4{
+	width: 220px;
+	height: 60px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	line-height: 60px;
+	background-color: #FAFAFA;
+	cursor:pointer ;
+}
+.usermessage5{
+	width: 220px;
+	height: 60px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	line-height: 60px;
+	background-color: #FAFAFA;
+	cursor:pointer ;
+}
+.usermessage5:hover{
+	color:red;
+}
+.usermessage0{
+	width: 220px;
+	height: 60px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	line-height: 60px;
+	background-color: #FAFAFA;
+	cursor:pointer ;
+}
+.usermessage11{
+	width: 220px;
+	height: 60px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	line-height: 60px;
+	color:red;
+	background-color: #FAFAFA;
+	cursor:pointer ;
+}
+.usermessage111{
+	width: 220px;
+	height: 60px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	line-height: 60px;
+	color:white;
+	background-color:red;
+	cursor:pointer ;
+}
+.li{
+	list-style-type:none;
+}
+
+/*preson-message的css */
+.body{
+	height: 600px;
+	width: 1000px; 
+	background-color: ;
+}
+.text{
+	width: 90px;
+	height:28px;
+	color: black;
+	margin-left: 50px;
+	margin-top: 20px;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	font-weight: bolder;
+	background-color: ;
+}
+.person_name{
+	width:800px;
+	height:60px;
+	margin-top: 20px;
+	margin-left: 50px;
+	background-color: white;
+
+	border-color:#9C9C9C;
+}
+.name_left{
+	width: 100px;
+	height: 60px;
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	font-weight: bolder;
+	text-align: center;
+	line-height:60px;
+	background-color: #FAFAFA;
+}
+.name_right{
+	width: 650px;
+	height: 60px;
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 16px;	
+	margin-left: 20px;
+	line-height:60px;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+}
+.hr{
+	height:2px;
+	border:none;
+	border-top:2px ridge  #9C9C9C;
+}
+#myPopup{
+	width: 500px;
+	height: 100px;
+}
+#mask{
+	background:black ;
+	opacity: 0.65;
+	height: 500px;
+	width: 1500px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+}
+#messagechange{
+	position: fixed;
+	left: 30%;
+	top:30%;
+	z-index: 1001;
+}
+#message{
+	width: 500px;
+	height: 500px;
+	background-color: red;	
+}
+#close{
+	width: 30px;
+	height: 30px;
+	background-color: yellow;
+	cursor: pointer;
+	position: absolute;
+	right: 5px;
+	top:5px;
+}
+#buton{
+	width: 100px;
+	height: 60px;
+	cursor: pointer;
+	background-color: yellow;
+}
+.buton1{
+	width: 70px;
+	height: 22px;
+	position: absolute;
+	right: 100px;
+	top:180px;
+	color:black;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	background-color: ;
+	border-width: 1px 1px 1px 1px ;
+	border-style: solid;
+	border-radius:10px 10px 10px 10px;
+	display: block;
+	z-index: 2;
+}
+.buton2{
+	width: 70px;
+	height: 22px;
+	position: absolute;
+	right: 100px;
+	top:180px;
+	color:black;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	background-color: ;
+	border-width: 1px 1px 1px 1px ;
+	border-style: solid;
+	border-radius:10px 10px 10px 10px;
+	display: none;
+}
+.h2type{
+	margin-left:140px;
+}
+.info_button{
+	width: 60px;
+	height: 30px;
+	color:white;
+	background-color: #008CBA;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	text-align: center;
+	cursor: pointer;
+	margin-left:160px;
+	margin-top:60px;
+	border-width: 1px 1px 1px 1px ;
+	border-style: solid;
+	border-radius:10px 10px 10px 10px;
+}
+
+/*手机注册输入验证码css*/
+#logotelregiste{
+	width:50px; 
+	height:70px; 
+	margin-top:50px; 
+	margin-left:170px; 
+	background-color:black;  
+}
+.Promptinformation1{
+	width:398px;
+	height:25px;
+	margin-top:50px;
+	text-align:center;
+	color:#696969;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	
+}
+.Promptinformation2{
+	width:398px;
+	height:25px;
+	margin-top:10px;
+	text-align:center;
+	color:#BEBEBE;
+	font-family: "微软雅黑";
+	font-size: 16px;	
+}
+.Telinput_position{
+	width:300px;
+	height:150px;
+	margin-left:50px;
+	margin-top:30px;
+}
+.Telinput_size1{
+	width:150px;
+	height:40px;
+	float: left;
+}
+.Telinput_size2{
+	width:298px;
+	height:40px;
+	margin-top:2px;
+}
+.returnChange{
+	width: 400px;
+	height: 20px;
+	margin-top:10px;
+	text-align:center;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color:#BEBEBE;
+	cursor:pointer ;
+}
+.telregisteinput1{
+	width: 300px;
+	height: 45px;
+}
+.telchecknumspan{
+	width:100px;
+	height:44px;
+	font-size:13px;
+	color:#BEBEBE;
+	float: left;
+	text-align:center;
+	line-height:44px;
+	display:block;
+}
+.telchecknumspan2{
+	width:100px;
+	height:44px;
+	font-size:13px;
+	color:#BEBEBE;
+	float: left;
+	text-align:center;
+	line-height:44px;
+	display:none;
+}
+.telcheckpwdstyle{
+	width:400px;
+	height:20px;
+	margin-top:2px;
+	font-size:13px;
+	color:darkred;
+}
+.time{
+	width:40px;
+	height:44px;
+	float: left;
+	color:#BEBEBE;
+}
+#text_1{
+	width:40px;
+	height:44px;
+	text-align:center;
+	line-height: 44px;
+}
