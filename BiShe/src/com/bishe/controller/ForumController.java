@@ -1,5 +1,6 @@
 package com.bishe.controller;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -82,6 +83,26 @@ public class ForumController {
 		model.addAttribute("articleList",articleList);
 		System.out.println("删除成功");
 		return "person_article";
+	}
+	
+	/**
+	 * @desc 用户跳转论坛页
+	 * @author 魏兴华
+	 * @createDate 2019年3月4日
+	 * @return  forum-article
+	 */
+	@RequestMapping(value="/showforum",method=RequestMethod.GET)
+	public String showForum(HttpSession session,Model model) throws Exception{
+		List<Article> articleList = new ArrayList();
+		//数据库查询
+		try {
+			articleList = this.forumServiceImpl.findAllForum();
+		} catch (Exception e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		}
+		model.addAttribute("articleList",articleList);
+		return "content";
 	}
 	
 

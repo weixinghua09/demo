@@ -19,7 +19,7 @@
 			<div id="header">
 				<!--logo-->
 				<div id="logo">
-					<img src="${ctx}/images/logo.png"/>
+					<img src="${ctx }/images/logo.png"/>
 				</div>
 				<!--搜索框-->
 				<div id="find">
@@ -46,7 +46,7 @@
 				<!--个人头像-->
 				<div id="userPad">
 					<div id="myPhoto">
-						<img src="${userImgPath}/${sessionScope.loginUser.userIcon}" onerror="this.src='images/me.png'"/>
+						<img src="${userImgPath}/${sessionScope.loginUser.userIcon}" onerror="this.src='${ctx }/images/me.png'"/>
 					</div>
 					<div class="popover bottom" id="myPopover" style="top:12%;">
 						<div class="arrow"></div>
@@ -67,7 +67,7 @@
                     <ul class="nav nav-secondary">
                         <li><a href="index.html" class="nav-a">首页</a></li>
                         <li><a href="progress.html" class="nav-a">复习进度</a></li>
-                        <li><a href="forum-articles.html" class="nav-a">论坛 </a></li>
+                        <li><a href="${ctx }/forum/showforum" class="nav-a">论坛 </a></li>
                         <li><a href="${ctx }/student/editForum?stuId=${stu.stuId}" class="nav-a">写文章 </a></li>
                     </ul>
 				</div>
@@ -351,9 +351,9 @@
 		}
   	</script>
 		<!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
-		<script src="${ctx}zui/lib/jquery/jquery.js"></script>
+		<script src="${ctx}/lib/jquery/jquery.js"></script>
 		<!-- ZUI Javascript组件 -->
-		<script src="${ctx}js/zui.min.js"></script>
+		<script src="${ctx}/js/zui.min.js"></script>
 		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>	
 	</body>
 </html>

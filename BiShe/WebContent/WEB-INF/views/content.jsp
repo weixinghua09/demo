@@ -1,21 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
- <c:set var="userImgPath" value="/file/personal" />
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
-<c:set var="courseImgPath" value="/file/course" />
-    <c:set var="userImgPath" value="/file/personal" />
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-		<script src="${ctx }/js/jquery.zui.js"></script>
-		<link rel="stylesheet" type="text/css" href="${ctx }/css/banner.css">
-		<script src="${ctx }/js/jquery.zui.js"></script>
+		<title>文章列表</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="${ctx}/css/zui.css">
 		<link rel="stylesheet" type="text/css" href="${ctx }/css/content.css">
-		<link rel="stylesheet" href="${ctx }/css/zui.min.css">
-		<script type="text/javascript" src="${ctx}/js/zui.min.js"></script>
-    	<script type="text/javascript" src="${ctx }/js/zui.chart.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="${ctx}/css/banner.css">
+		<link rel="stylesheet" type="text/css" href="${ctx}/css/zui.css">
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     	<script type="text/javascript" src="${ctx }/js/chart.js"></script>
 	</head> 
 	<body style="">
@@ -23,7 +21,7 @@
 			<div id="header">
 				<!--logo-->
 				<div id="logo">
-					<img src="${ctx }/img/logo2.png"/>
+					<img src="${ctx }/images/logo.png"/>
 				</div>
 				<!--搜索框-->
 				<div id="find">
@@ -47,32 +45,25 @@
 				<!--定位-->
 				<div id="locate">
 					<i class="icon icon-map-marker icon-2x" ></i>
-					<p id="address">${sessionScope.userAddress.address }[<a href="${ctx }/useraddress/toaddress" style="color:#3280fc; text-decoration: none;">切换地址</a>]</p>
+					<p id="address">[<a href="${ctx }/useraddress/toaddress" style="color:#3280fc; text-decoration: none;">切换地址</a>]</p>
 				</div>
 				<!--个人头像-->
 				<div id="userPad">
-						 <c:if test="${not empty sessionScope.loginUser}">
-					 	<div id="myPhoto">
+					<div id="myPhoto">
 						<img src="${userImgPath}/${sessionScope.loginUser.userIcon}" onerror="this.src='${ctx }/img/logo.jpg'"/>
-						</div>
-						<div class="popover bottom" id="myPopover">
-							<div class="arrow"></div>
-								<h3 class="popover-title"><a href="${ctx }/user/person"><i class="icon icon-home"></i>&nbsp&nbsp个人中心</a></h3>
-								<div class="popover-content">
-									<ul>
-										<li class="menu-li"><a href="${ctx }/user/person"><i class="icon icon-envelope"></i>&nbsp&nbsp我的消息</a></li>
-										<li class="menu-li"><a href="${ctx }/user/person?address=1"><i class="icon icon-history"></i>&nbsp&nbsp我的足迹</a></li>
-										<li class="menu-li"><a href="${ctx }/user/person?address=2"><i class="icon icon-check-board"></i>&nbsp&nbsp我的预约</a></li>
-										<li class="menu-li"><a href="${ctx }/user/person?address=3"><i class="icon icon-star"></i>&nbsp&nbsp我的收藏</a></li>
-									</ul>
-								</div>
-						</div>
-					 </c:if>
-					 <c:if test="${ empty sessionScope.loginUser}">
-					 	<div id="loginregiste">
-							<a href="${ctx }/user/toiframe"><font size="4">登陆 </font></a><font size="5" color="blue"> / </font><a href="${ctx }/user/toiframe?option=regist"><font size="4"> 注册</font></a>
-						</div>
-					 </c:if>
+					</div>
+					<div class="popover bottom" id="myPopover">
+						<div class="arrow"></div>
+							<h3 class="popover-title"><a href="${ctx }/user/person"><i class="icon icon-home"></i>&nbsp&nbsp个人中心</a></h3>
+							<div class="popover-content">
+								<ul>
+									<li class="menu-li"><a href="${ctx }/user/person"><i class="icon icon-envelope"></i>&nbsp&nbsp我的消息</a></li>
+									<li class="menu-li"><a href="${ctx }/user/person?address=1"><i class="icon icon-history"></i>&nbsp&nbsp我的足迹</a></li>
+									<li class="menu-li"><a href="${ctx }/user/person?address=2"><i class="icon icon-check-board"></i>&nbsp&nbsp我的预约</a></li>
+									<li class="menu-li"><a href="${ctx }/user/person?address=3"><i class="icon icon-star"></i>&nbsp&nbsp我的收藏</a></li>
+								</ul>
+							</div>
+					</div>
 					</div>
 				</div>
 				<!--导航条-->
@@ -120,11 +111,11 @@
 									<div class="course">
 									<a href="${ctx }/course/toCourseDetail?courseId=${p.id}" style="color: #666560;">
 										<div class="course-img">
-											<img src="${courseImgPath}/${cl.course.courseImg }" style="border-radius: 8px;" />
+											<img src="${ctx }/images/label-2.jpg" style="border-radius: 8px;" />
 										</div>
 									</a>
 										<div class="course-info">
-											<div class="course-name">
+											<div class="coursename">
 												<a href="${ctx }/course/toCourseDetail?courseId=${p.id}" style="color: #666560;">
 													${p.title }
 												</a>
@@ -142,15 +133,9 @@
 											</div>
 										</div>
 									</div>
-								
 								</c:forEach>
 							</c:if>
-								
 							</div>
-						</div>
-						<!--数据对比-->
-						<div id="content-left-bottom">
-							<canvas id="myChart" width="741" height="400"></canvas>
 						</div>
 						<!--分页-->
 					<div id="content-left-paging">
@@ -160,19 +145,39 @@
 					<!-- 广告-->
 					<div id="content-right">
 						<div id="content-right-top">
-							<c:forEach items="${cal }" var="cal">
-								<div class="content-adcard">
-									<a class="card" href="${ctx }/course/toCourseDetail?courseId={cal.course.courseId }">
-										<img src="${courseImgPath}/${cal.course.courseImg }" >
-										<div class="card-heading"><strong>${cal.course.courseName }</strong></div>
-										<div class="card-content text-muted">${cal.course.description }</div>
-										<div class="card-actions">
-										<button type="button" class="btn btn-danger" value="${cal.collection}"  id="collection${cal.course.courseId}" onclick="ButtonCollectionShow(${cal.course.courseId})"><i class="icon-heart"></i> 喜欢</button>
-										<div class="pull-right text-danger"><i class="icon-heart-empty"></i> 520 人喜欢</div>
-										</div>
-									</a>
-								</div>	
-							</c:forEach>
+							<div class="content-adcard">
+								<a class="card" href="${ctx }/course/toCourseDetail?courseId={cal.course.courseId }">
+									<img src="${ctx }/images/label-1.jpg" >
+									<div class="card-heading"><strong>英语单词备考</strong></div>
+									<div class="card-content text-muted">考研大纲高频词汇</div>
+									<div class="card-actions">
+									<button type="button" class="btn btn-danger" value="3"  id="collection${cal.course.courseId}" onclick="ButtonCollectionShow(${cal.course.courseId})"><i class="icon-heart"></i> 喜欢</button>
+									<div class="pull-right text-danger"><i class="icon-heart-empty"></i> 520 人喜欢</div>
+									</div>
+								</a>
+							</div>
+							<div class="content-adcard">
+								<a class="card" href="${ctx }/course/toCourseDetail?courseId={cal.course.courseId }">
+									<img src="${ctx }/images/label-1.jpg" >
+									<div class="card-heading"><strong>英语单词备考</strong></div>
+									<div class="card-content text-muted">考研大纲高频词汇</div>
+									<div class="card-actions">
+									<button type="button" class="btn btn-danger" value="3"  id="collection${cal.course.courseId}" onclick="ButtonCollectionShow(${cal.course.courseId})"><i class="icon-heart"></i> 喜欢</button>
+									<div class="pull-right text-danger"><i class="icon-heart-empty"></i> 520 人喜欢</div>
+									</div>
+								</a>
+							</div>
+							<div class="content-adcard">
+								<a class="card" href="${ctx }/course/toCourseDetail?courseId={cal.course.courseId }">
+									<img src="${ctx }/images/label-1.jpg" >
+									<div class="card-heading"><strong>英语单词备考</strong></div>
+									<div class="card-content text-muted">考研大纲高频词汇</div>
+									<div class="card-actions">
+									<button type="button" class="btn btn-danger" value="3"  id="collection${cal.course.courseId}" onclick="ButtonCollectionShow(${cal.course.courseId})"><i class="icon-heart"></i> 喜欢</button>
+									<div class="pull-right text-danger"><i class="icon-heart-empty"></i> 520 人喜欢</div>
+									</div>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -185,7 +190,7 @@
 						<!-- 导航头部 -->
 						<div class="navbar-header">
 							<!-- 品牌名称或logo -->
-							<a class="navbar-brand" href="your/nice/url">KeDou</a>
+							<a class="navbar-brand" href="your/nice/url">Morning</a>
 						</div>
 						<!-- 导航项目 -->
 						<div class="collapse navbar-collapse navbar-collapse-example">
@@ -200,10 +205,10 @@
 				</nav>
 			</div>
 		</div>
-		<script type="text/javascript">
-		<c:if test="${empty error }">
-			func1(${gsonCourseList });
-		</c:if>
-		</script>
+		<!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+		<script src="${ctx}/js/jquery.js"></script>
+		<!-- ZUI Javascript组件 -->
+		<script src="${ctx}/js/zui.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>	
 	</body>
 </html>	

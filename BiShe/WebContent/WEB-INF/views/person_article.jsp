@@ -9,10 +9,8 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<script src="${ctx }/js/jquery.zui.js"></script>
-		<link rel="stylesheet" type="text/css" href="${ctx}/css/personal.css"/>
 		<link rel="stylesheet" href="${ctx}/css/zui.min.css"/>
 		<script type="text/javascript" src="${ctx}/js/zui.min.js"></script>
-			<script src="${ctx }/js/personal.js"></script>
 	</head>
 	<body>
 	<!-- 有收藏课程 -->

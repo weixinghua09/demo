@@ -31,7 +31,7 @@ public class ForumDaoImpl extends BaseDao<Article>{
 	/** 
 	 * @desc 收藏文章(未实现)
 	 * @author 魏兴华
-	 * @createDate 2018年5月22日
+	 * @createDate 2019年2月22日
 	 * @return
 	 * @throws Exception
 	 */	
@@ -53,7 +53,7 @@ public class ForumDaoImpl extends BaseDao<Article>{
 	/** 
 	 * @desc 查询stuId所有文章
 	 * @author 魏兴华
-	 * @createDate 2018年3月6日
+	 * @createDate 2019年2月22日
 	 * @return
 	 * @throws Exception
 	 */
