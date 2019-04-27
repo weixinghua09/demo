@@ -1,10 +1,14 @@
 package com.bishe.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
+@Entity
+@Table(name="mathtypechapter")
 public class MathTypeChapter {
 	
 	@Id
@@ -12,7 +16,7 @@ public class MathTypeChapter {
 	@GenericGenerator(name="increment_generator", strategy="increment")
 	
 	private int id;
-	private String chapter;
+	private String type;
 	private int math1;
 	private int math2;
 	private int math3;
@@ -24,11 +28,11 @@ public class MathTypeChapter {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getChapter() {
-		return chapter;
+	public String getType() {
+		return type;
 	}
-	public void setChapter(String chapter) {
-		this.chapter = chapter;
+	public void setType(String type) {
+		this.type = type;
 	}
 	public int getMath1() {
 		return math1;

@@ -50,9 +50,7 @@ public class StuController {
 	 */
 	@RequestMapping(value="/person")
 	public String  index(@RequestParam("stuId") int stuId,Model model) throws Exception{
-		System.out.println("controller1");
 		Student stu = stuServiceImpl.findById(stuId);
-		System.out.println("controller1");
 		model.addAttribute("stu",stu);
 		return "person";
 	}

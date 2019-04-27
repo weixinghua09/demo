@@ -58,5 +58,16 @@ public class StuDaoImpl extends BaseDao<Student>{
 			Query query=sessionFactory.getCurrentSession().createQuery(hql);
 			return query.list();
 		}
+		
+		/**
+		 * @desc 通过id查询学生所考数学种类
+		 * @param 原源
+		 * @createDate 2019年2月13日
+		 * @return List
+		 * @throws Exception
+		 */
+		public int findMathById(int stuId) throws Exception{
+			return this.get(stuId).getMath();
+		}
 
 }

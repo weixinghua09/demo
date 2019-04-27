@@ -19,6 +19,8 @@ public class Student {
 	private String stuPwd;
 	private String stuTel;
 	private int stuGrade;
+	private int math;
+	
 	public int getstuId() {
 		return stuId;
 	}
@@ -49,6 +51,11 @@ public class Student {
 	public void setstuGrade(int stuGrade) {
 		this.stuGrade = stuGrade;
 	}
-	
+	public int getMath() {
+		return math;
+	}
+	public void setMath(int math) {
+		this.math = math;
+	}
 	
 }
