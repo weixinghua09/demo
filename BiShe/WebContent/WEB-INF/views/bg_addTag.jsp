@@ -34,8 +34,9 @@
 </div>
 <div id="content">
 	<div class="left_menu">
-				<ul id="nav_dot">
+	<ul id="nav_dot">
       <li>
+          <li>
           <h4 class="M1"><i class="icon icon-user">&nbsp;&nbsp;</i>用户管理</h4>
           <div class="list-item none">
             <a href='${ctx}/bg_common/bggoAddAdmin'>添加管理员</a>
@@ -44,24 +45,32 @@
           </div>
         </li>
         <li>
-          <h4 class="M2"><i class="icon icon-shopping-cart">&nbsp;&nbsp;</i>机构管理</h4>
+          <h4 class="M2"><i class="icon icon-align-left">&nbsp;&nbsp;</i>学习章节管理</h4>
           <div class="list-item none">
-            <a href="${ctx}/bg_common/bggoEditStore">修改机构</a>
-            <a href="${ctx}/bg_common/bggoSearchStore">查看机构列表</a>         
+            <a href="${ctx}/bg_common/bggoEditStore">添加学习章节</a>
+            <a href="${ctx}/bg_common/bggoSearchStore">修改学习章节</a>
+            <a href='bg_searchClassType.html'>查看学习章节列表</a>        
            </div>
         </li>
         <li>
-          <h4 class="M3"><i class="icon icon-time">&nbsp;&nbsp;</i>预约管理</h4>
+          <h4 class="M2"><i class="icon icon-align-left">&nbsp;&nbsp;</i>标签管理</h4>
           <div class="list-item none">
-            <a href='${ctx}/bg_common/bggoSearchReservation'>预约检索</a>
+            <a href="${ctx}/bg_common/bggoAddTag">添加标签</a>
+            <a href='${ctx}/bg_common/searchTag'>查看标签列表</a>        
+           </div>
+        </li>
+        <li>
+          <h4 class="M3"><i class="icon icon-book">&nbsp;&nbsp;</i>评论管理</h4>
+          <div class="list-item none">
+            <a href='${ctx}/bg_common/bggoSearchReservation'>查看评论列表</a>
           </div>
         </li>
         <li>
-          <h4 class="M5"><i class="icon icon-book">&nbsp;&nbsp;</i>课程管理</h4>
+          <h4 class="M5"><i class="icon icon-newspaper-o">&nbsp;&nbsp;</i>文章管理</h4>
           <div class="list-item none">
-            <a href='${ctx}/bg_common/bggoSearchCourse'>查看课程列表</a>
+            <a href='${ctx}/bg_common/bggoSearchArticle'>查看文章列表</a>
           </div>
-        </li>			
+        </li>
   </ul>
 		</div>
 		<div class="m-right">

@@ -83,7 +83,7 @@
 						<li style="margin-left:25px;">您当前的位置：</li>
 						<li><a href="#">首页</a></li>
 						<li>></li>
-                		<li><a href="#">查看文章列表</a></li>
+                		<li><a href="#">查看管理员列表</a></li>
 					</ul>
 			</div>
 	<div class="main">
@@ -100,34 +100,30 @@
 
             <div class="datagrid-container">
             	<!-- 有文章 -->
-	<c:if test="${not empty articleList }">
+	<c:if test="${not empty adminList }">
 	<form action="${ctx}/collection/batchdelete?page=${page }" method="post">
 		<table cellspacing="4" cellpadding="0" class="table">
 				<tr>
 					<th class="tr-th3" style="display:table-cell;vertical-align:middle">
 					<input type="checkbox" id="allCheckBox" style="margin-right: 10px;margin-left: 18px;checked:false value="全选">
 					</th>
-					<th class="tr-th1" style="vertical-align:middle;">题目</th>
+					<th class="tr-th1" style="vertical-align:middle;">ID</th>
 					<th class="tr-th1" style="vertical-align:middle;">标签</th>
-					<th class="tr-th1" style="vertical-align:middle;">内容</th>
-					<th class="tr-th1" style="vertical-align:middle;">时间</th>
 					<th class="tr-th1" style="vertical-align:middle;">删除</th>
 				</tr>
-				<c:forEach items="${articleList }" var="p">
+				<c:forEach items="${adminList }" var="p">
 				<tr class="test" id="">
 					<th class="tr-td1" style="display:table-cell; vertical-align:middle"><input type="checkbox" name="tempString"  style="margin-right: 10px;margin-left: 18px;checked:false" value="${p.id }"></th>
-					<td class="tr-td"  style="display:table-cell; vertical-align:middle">${p.title }</td>
-					<td class="tr-td" style="display:table-cell; vertical-align:middle">${p.tag }</td>
-					<td class="tr-td" style="display:table-cell; vertical-align:middle">${p.content }</td>
-					<td class="tr-td" style="display:table-cell; vertical-align:middle">${p.date }</td>
-					<th class="tr-td1" style="display:table-cell; vertical-align:middle"><a href="${ctx}/bg_common/deleteForum?id=${p.id}"><div class="delete"><i class="icon icon-trash icon-1x"></i></div></a></th>
+					<td class="tr-td"  style="display:table-cell; vertical-align:middle">${p.id }</td>
+					<td class="tr-td" style="display:table-cell; vertical-align:middle">${p.name }</td>
+					<th class="tr-td1" style="display:table-cell; vertical-align:middle"><a href="${ctx}/bg_admin/deleteTag?id=${p.id}"><div class="delete"><i class="icon icon-trash icon-1x"></i></div></a></th>
 				</tr>
 				</c:forEach>
 		</table>
 	</form>
 </c:if>	
-			<!-- 无收藏课程 -->
-	<c:if test="${ empty articleList }">
+			<!-- 无标签 -->
+	<c:if test="${ empty adminList }">
 		<div class="nonecourse">
 				<div class="nonecourseImg">
 					<img  src="${ctx}/images/none.jpg" width="20%" height="20%">
@@ -136,10 +132,7 @@
 		</div>
 	
 	</c:if>
-            </div>
-            <div class="pager"></div>
-            <div class="btn-group">
-        </div>
+ </div>
         </div>
 			</div>
 		

@@ -66,7 +66,7 @@
 				<div id="navigation">
                     <ul class="nav nav-secondary">
                         <li><a href="index.html" class="nav-a">首页</a></li>
-                        <li><a href="${ctx }/progress.jsp" class="nav-a">复习进度</a></li>
+                        <li><a href="${ctx }/chapter/progress?stuId=1" class="nav-a">复习进度</a></li>
                         <li><a href="${ctx }/forum/showforum" class="nav-a">论坛 </a></li>
                         <li><a href="${ctx }/student/editForum?stuId=${stu.stuId}" class="nav-a">写文章 </a></li>
                     </ul>

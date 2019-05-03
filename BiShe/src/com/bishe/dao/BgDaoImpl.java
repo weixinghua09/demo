@@ -14,6 +14,7 @@ import com.bishe.entity.MathTypeChapter;
 import com.bishe.entity.PoliticsType;
 import com.bishe.entity.StuEngTypeGrade;
 import com.bishe.entity.StuPoliticsTypeGrade;
+import com.bishe.entity.Student;
 
 @Repository
 public class BgDaoImpl {
@@ -43,8 +44,9 @@ public class BgDaoImpl {
 	 * @return List
 	 * @throws Exception
 	 */
-	public void  deleteComment(int id) throws Exception{
-		String hql ="delete Comment  where id = :id";
+	public void  deleteComment(Comment c) throws Exception{
+		int id = c.getId();
+		String hql ="delete Comment where id = :id";
 		@SuppressWarnings("rawtypes")
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		query.setParameter("id",id);
@@ -175,6 +177,15 @@ public class BgDaoImpl {
 	 */
 	public void  savePoliticsType(PoliticsType pt ) throws Exception{
 		this.sessionFactory.getCurrentSession().save(pt);
+	}
+
+	public List<Student> findAllUser() {
+		String hql = " from Student";
+		@SuppressWarnings("rawtypes")
+		Query query = (Query)this.sessionFactory.getCurrentSession().createQuery(hql);
+	    @SuppressWarnings("unchecked")
+		List<Student> studentList = query.list();
+	    return studentList;
 	}
 	
 	

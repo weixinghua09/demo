@@ -123,9 +123,7 @@
 									method="post" class="registration-form">
 									<div class="course">
 										<div class="course-img">
-
-											<p class="hl-success">${ml.chapter }</p>
-
+											<p class="hl-success">${ml.type }</p>
 										</div>
 
 										<div class="course-info">

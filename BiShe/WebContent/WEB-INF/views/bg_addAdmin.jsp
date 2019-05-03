@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"  isELIgnored="false"%>
        <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+       <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>       
     <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>清晨后台管理系统</title>
+<title>课兜后台管理系统</title>
 <link rel="stylesheet" href="${ctx }/css/zui.min.css">
 <script src="${ctx }/js/jquery.zui.js"></script>
 <script src="${ctx }/js/zui.min.js"></script>
@@ -14,16 +15,17 @@
 <link type="text/css" rel="stylesheet" href="${ctx }/css/bgstyle.css" />
 <script type="text/javascript" src="${ctx }/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="${ctx }/js/menu.js"></script>
+
 </head>
 
 <body>
 <div class="top"></div>
 <div id="header">
-	<div class="logo">清晨后台管理系统</div>
+	<div class="logo">课兜后台管理系统</div>
 	<div class="navigation">
 		<ul>
 		 	<li>欢迎您！</li>
-			<li><a href="">${sessionScope.loginAdmin.adminAccount }</a></li>
+			<li><a href="">Tony</a></li>
 			<li><a href="">修改密码</a></li>
 			<li><a href="">设置</a></li>
 			<li><a href="">退出</a></li>
@@ -66,20 +68,29 @@
           <div class="list-item none">
             <a href='${ctx}/bg_common/bggoSearchArticle'>查看文章列表</a>
           </div>
-        </li>				
+        </li>		
   </ul>
 		</div>
 		<div class="m-right">
 			<div class="right-nav">
-					<ul>
-							<li></li>
-								<li style="margin-left:25px;">您当前的位置：</li>
-								<li><a href="#">首页</a></li>
-								
-						</ul>
+				<ul>
+					<li></li>
+					<li style="margin-left:25px;">您当前的位置：</li>
+					<li><a href="bg_index.html">首页</a></li>
+					<li>></li>
+					<li><a href="#">最新公告</a></li>
+				</ul>
 			</div>
 			<div class="main">
-				
+				<form action="${ctx }/bg_admin/addAdmin" id="searchForm" method="get">
+					<div class="col-md-10 col-sm-5" style="margin-bottom: 20px;">
+						<label for="exampleInputPassword1">要添加的管理员账户</label>
+				    	<input name="name" type="password" class="form-control" id="tagName" placeholder="">
+						<label for="exampleInputPassword1">密码</label>
+				    	<input name="adminPwd" type="text" class="form-control" id="tagName" placeholder="">
+				    	<button type="submit" class="btn btn-primary">添加</button>
+					</div>
+				</form>
 			</div>
 		</div>
 </div>

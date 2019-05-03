@@ -8,18 +8,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>课兜后台管理系统</title>
 <!-- ZUI 标准版压缩后的 CSS 文件 -->
-<link rel="stylesheet" href="${ctx }/dist/css/zui.min.css">
+<link rel="stylesheet" href="${ctx }/css/zui.min.css">
 
 <!-- ZUI Javascript 依赖 jQuery -->
-<script src="${ctx }/dist/lib/jquery/jquery.js"></script>
+<script src="${ctx }/js/jquery.js"></script>
 <!-- ZUI 标准版压缩后的 JavaScript 文件 -->
-<script src="${ctx }/dist/js/zui.min.js"></script>
+<script src="${ctx }/js/zui.min.js"></script>
 
 <link type="text/css" rel="stylesheet" href="${ctx }/css/style.css" />
 <script type="text/javascript" src="${ctx }/js/menu.js"></script>
-<link href="${ctx }/dist/lib/datagrid/zui.datagrid.min.css"
+<link href="${ctx }/zui/lib/datagrid/zui.datagrid.min.css"
 	rel="stylesheet">
-<script src="${ctx }/dist/lib/datagrid/zui.datagrid.min.js"></script>
+<script src="${ctx }/zui/lib/datagrid/zui.datagrid.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
   //这是定义的静态数组 传回数据是按照如下格式传回即可
@@ -119,45 +119,39 @@ function al(){
 		<div class="left_menu">
 			<ul id="nav_dot">
 				<li>
-					<h4 class="M1">
-						<i class="icon icon-user">&nbsp;&nbsp;</i>用户管理
-					</h4>
-					<div class="list-item none">
-						<a href='bg_addAdmin.html'>添加管理员</a> <a href='bg_editUser.html'>修改用户信息</a>
-						<a href='bg_searchUser.html'>查看用户列表</a> <a
-							href='bg_searchAdmin.html'>查看管理员列表</a>
-					</div>
-				</li>
-
-
-				<li>
-					<h4 class="M4">
-						<i class="icon icon-align-left">&nbsp;&nbsp;</i>学习章节管理
-					</h4>
-					<div class="list-item none">
-						<a href='${ctx }/bg/tiaozhuan'>添加学习章节</a> <a
-							href='bg_editClassType.html'>修改学习章节</a> <a
-							href='bg_searchClassType.html'>查看学习章节列表</a>
-
-					</div>
-				</li>
-				<li>
-					<h4 class="M5">
-						<i class="icon icon-book">&nbsp;&nbsp;</i>评论管理
-					</h4>
-					<div class="list-item none">
-						<a href='bg_searchClass.html'>查看评论列表</a>
-					</div>
-				</li>
-				<li>
-					<h4 class="M6">
-						<i class="icon icon-newspaper-o">&nbsp;&nbsp;</i>文章管理
-					</h4>
-					<div class="list-item none">
-						<a href='bg_addBulletin.html'>添加文章</a> <a
-							href='bg_searchBulletin.html'>操作</a>
-					</div>
-				</li>
+          <h4 class="M1"><i class="icon icon-user">&nbsp;&nbsp;</i>用户管理</h4>
+          <div class="list-item none">
+            <a href='${ctx}/bg_admin/toAddAdmin'>添加管理员</a>
+            <a href='${ctx}/bg_admin/searchAdmin'>查看管理员列表</a>
+            <a href='${ctx}/bg_admin/searchUser'>查看用户列表</a>
+          </div>
+        </li>
+        <li>
+          <h4 class="M2"><i class="icon icon-align-left">&nbsp;&nbsp;</i>学习章节管理</h4>
+          <div class="list-item none">
+            <a href="${ctx}/bg_admin/tiaozhuan">添加学习章节</a>
+            <a href="${ctx}/bg_admin/searchChapter">查看学习章节列表</a>        
+           </div>
+        </li>
+        <li>
+          <h4 class="M2"><i class="icon icon-align-left">&nbsp;&nbsp;</i>标签管理</h4>
+          <div class="list-item none">
+            <a href="${ctx}/bg_common/bggoAddTag">添加标签</a>
+            <a href='${ctx}/bg_common/searchTag'>查看标签列表</a>        
+           </div>
+        </li>
+        <li>
+          <h4 class="M3"><i class="icon icon-book">&nbsp;&nbsp;</i>评论管理</h4>
+          <div class="list-item none">
+            <a href='${ctx}/bg_admin/comment'>查看评论列表</a>
+          </div>
+        </li>
+        <li>
+          <h4 class="M5"><i class="icon icon-newspaper-o">&nbsp;&nbsp;</i>文章管理</h4>
+          <div class="list-item none">
+            <a href='${ctx}/bg_common/bggoSearchArticle'>查看文章列表</a>
+          </div>
+        </li>		
 			</ul>
 		</div>
 		<div class="m-right">
@@ -201,11 +195,6 @@ function al(){
 						<div class="btn-group"></div>
 					</div>
 				</div>
-
-			</div>
-			<div class="bottom"></div>
-			<div id="footer">
-				<p>Copyright© 2015 版权所有</p>
 			</div>
 			<script>navList(12);</script>
 </body>

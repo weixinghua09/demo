@@ -97,39 +97,6 @@ public class AdminServiceImpl {
 	public void saveAdmin(Admin ad) throws Exception {
 		adminDaoImpl.save(ad);
 	}
-	
-	
-	
-	/**
-	 * 登录
-	 * @param ad
-	 * @param pwd
-	 * @return
-	 * @throws Exception 
-	 */
-	@Transactional
-	public Admin adminLogin(Admin ad) throws Exception {
-
-				 //设置登录次数
-				     ad.setLoginCount(ad.getLoginCount()+1);
-				 //设置用户上次登录时间
-				     ad.setLastLoginTime(ad.getLoginTime());
-				 //设置用户登录时间
-				     ad.setLoginTime(new Date());
-				    this.updateLoginInfo(ad);
-				return ad;//可以登陆
-		
-	}
-	/**
-	 * 更新管理员登录信息 （登陆时间 上次登录时间 登录次数）
-	 * @param u
-	 * @return  返回 用户ID 
-	 */
-	public int updateLoginInfo(Admin ad) throws Exception{
-		Object [] params = {ad.getLoginTime(),ad.getLastLoginTime(),ad.getLoginCount(),ad.getLastLoginIp(),ad.getLoginIp(),ad.getAdminId()};
-			this.adminDaoImpl.updateLoginInfo(params);
-		return ad.getAdminId();
-	}
 
 	/**
 	 * 添加标签
@@ -140,10 +107,30 @@ public class AdminServiceImpl {
 		this.adminDaoImpl.saveTag(tag);
 	}
 
-
+	/**
+	 * 查询标签列表
+	 * @return tagList
+	 * @throws Exception 
+	 */
 	public List<Type> findAllTag() throws Exception {
 		List<Type> tagList = this.adminDaoImpl.findAllTag();
 		return tagList;
+	}
+
+	/**
+	 * 删除标签
+	 * @return 
+	 * @throws Exception 
+	 */
+	public void deleteTag(Type tag) {
+		// TODO 自动生成的方法存根
+		this.adminDaoImpl.deleteTag(tag);
+	}
+
+
+	public List<Admin> findAlladmin() throws Exception {
+		
+		return this.adminDaoImpl.findAll();
 	}
 	
 }

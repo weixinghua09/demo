@@ -14,6 +14,7 @@ import com.bishe.entity.Comment;
 import com.bishe.entity.EnglishType;
 import com.bishe.entity.MathTypeChapter;
 import com.bishe.entity.PoliticsType;
+import com.bishe.entity.Student;
 
 @Service
 @Transactional(readOnly=false)
@@ -39,8 +40,8 @@ public class BgServiceImpl {
 	 * @return List
 	 * @throws Exception
 	 */
-	public void deleteComment(int id) throws Exception{
-		this.bgDaoImpl.deleteComment(id);
+	public void deleteComment(Comment c) throws Exception{
+		this.bgDaoImpl.deleteComment(c);
 	}
 	
 	/**
@@ -140,6 +141,10 @@ public class BgServiceImpl {
 	 */
 	public void  savePoliticsType(PoliticsType pt ) throws Exception{
 		this.bgDaoImpl.savePoliticsType(pt);
+	}
+
+	public List<Student> findAllUser() {
+		return this.bgDaoImpl.findAllUser();
 	}
 	
 }

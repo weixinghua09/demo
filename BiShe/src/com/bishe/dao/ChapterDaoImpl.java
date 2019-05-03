@@ -37,9 +37,7 @@ public class ChapterDaoImpl extends BaseDao<StuMathTypeGrade> {
 		}if(math == 3){
 			hql = " from MathTypeChapter  where math3 = 1";
 		}
-		@SuppressWarnings("rawtypes")
 		Query query = (Query)this.sessionFactory.getCurrentSession().createQuery(hql);
-	    @SuppressWarnings("unchecked")
 		List<MathTypeChapter> ml = query.list();
 	    return ml;
 	}

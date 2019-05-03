@@ -55,7 +55,7 @@ public class BgControllerImpl {
 			Gson g = new Gson();
 			List<Comment> l = g.fromJson(str, new TypeToken<List<Comment>>() {}.getType());
 			for(Comment c:l){
-				this.bgServiceImpl.deleteComment(c.getId());
+				this.bgServiceImpl.deleteComment(c);
 			}
 		}
 		List<Comment> cl = this.bgServiceImpl.findComment();

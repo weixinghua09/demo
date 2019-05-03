@@ -20,6 +20,28 @@ public class Student {
 	private String stuTel;
 	private int stuGrade;
 	private int math;
+	private String school;
+	
+	public String getSchool() {
+		return school;
+	}
+	public void setSchool(String school) {
+		this.school = school;
+	}
+	public int getExamYear() {
+		return examYear;
+	}
+	public void setExamYear(int examYear) {
+		this.examYear = examYear;
+	}
+	public String getProfession() {
+		return Profession;
+	}
+	public void setProfession(String profession) {
+		Profession = profession;
+	}
+	private int examYear;
+	private String Profession;
 	
 	public int getstuId() {
 		return stuId;

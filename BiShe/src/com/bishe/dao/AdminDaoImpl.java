@@ -87,7 +87,7 @@ public class AdminDaoImpl extends BaseDao<Admin>{
 
 	/**
 	 * 添加标签
-	 * @param u
+	 * @param tag
 	 * @return 
 	 */
 	public void saveTag(Type tag) {
@@ -95,12 +95,30 @@ public class AdminDaoImpl extends BaseDao<Admin>{
 		sessionFactory.getCurrentSession().save(tag);
 	}
 
-
+	/**
+	 * 查询标签列表
+	 * @param 
+	 * @return list
+	 */
 	public List<Type> findAllTag() {
 		SessionFactory sessionFactory = super.getSessionFactory();
-		String hql ="from Type";
+		String hql ="from Type order by id";
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		return query.list();
+	}
+	/**
+	 * 删除单个标签
+	 * @param u
+	 * @return 
+	 */
+	public void deleteTag(Type tag) {
+		// TODO 自动生成的方法存根
+		try {
+			this.delete(tag);
+		} catch (Exception e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		}
 	}
 	
 

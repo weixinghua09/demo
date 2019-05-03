@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.google.gson.Gson;
 import com.bishe.entity.Article;
 import com.bishe.entity.Student;
+import com.bishe.entity.Type;
 import com.bishe.service.AdminServiceImpl;
 import com.bishe.service.ForumServiceImpl;
 
@@ -26,13 +27,37 @@ public class bg_CommonController {
 	@Resource
 	private ForumServiceImpl forumServiceImpl;
 	
+	
+	/**
+	 * @desc 跳登录页面
+	 * @param 魏兴华
+	 * @createDate 2019年2月10日
+	 * @return List
+	 * @throws Exception
+	 */
 	@RequestMapping(value="/tobglogin")
 	private String openview() {
 		return "bg_login";
 	}
 	
 	/**
-	 * 检索数据库中所有文章
+	 * @desc 查看标签列表
+	 * @param 魏兴华
+	 * @createDate 2019年2月10日
+	 * @return List
+	 * @throws Exception
+	 */
+	@RequestMapping(value="/searchTag")
+	public String findAllTag(Model model) throws Exception{
+		System.out.println("查询标签列表");
+		List<Type> tagList = this.adminServiceImpl.findAllTag();
+		model.addAttribute("tagList", tagList);
+		System.out.println("添加并显示列表");
+		return "bg_searchTag";
+	}
+	
+	/**
+	 * 查看文章列表
 	 * @param model
 	 * @return
 	 */
@@ -87,5 +112,7 @@ public class bg_CommonController {
 	public String goAddTag() {
 		return "bg_addTag";
 	}	
+	
+	
 
 }

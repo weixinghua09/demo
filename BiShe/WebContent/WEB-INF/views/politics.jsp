@@ -119,16 +119,12 @@
 						</div>
 						<div id="course-list">
 							<c:forEach items="${pl }" var="pl">
-								<form role="form" action="${ctx }/chapter/politicschapter"
+								<form role="form" action="${ctx }/chapter/mathchapter"
 									method="post" class="registration-form">
 									<div class="course">
 										<div class="course-img">
-
-											<p class="hl-warning">${pl.type }</p>
-
+											<p>${pl.type }</p>
 										</div>
-
-
 										<div class="input-group" id="pstart">
 											<input type="text" style="display: none" name="stuId"
 												id="stuId" value="${ stuId}"> <input type="text"
@@ -139,11 +135,8 @@
 												class="input-group-addon fix-border fix-padding">&nbsp;&nbsp;结束时间&nbsp;&nbsp;
 											</span> <input type="text" class="form-control" name="finishDate"
 												id="finishDate" placeholder="XXXX年XX月XX日">
-
 										</div>
-
 										<div class="input-group" id="pstart2">
-
 											<span class="input-group-addon fix-border">做题正确率</span> <input
 												type="text" class="form-control" name="accuracy"
 												id="accuracy" placeholder="100.00 %"> <span
